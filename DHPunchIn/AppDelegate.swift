@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setDefaultNavigationController()
+        
         return true
     }
 
@@ -40,7 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    // MARK: - Methods
+    func setDefaultNavigationController() {
+        let storyboard : UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc : MainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let menuVc : MenuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        
+        let sliderNC : SlideNavigationController? = SlideNavigationController.init(rootViewController: vc)
+        
+        sliderNC?.leftMenu = menuVc;
+        sliderNC?.rightMenu = nil
+        sliderNC?.enableSwipeGesture = false
+        
+        self.window?.rootViewController = sliderNC
+    }
 }
 

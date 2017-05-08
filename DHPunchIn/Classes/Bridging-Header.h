@@ -8,3 +8,4 @@
 
 #import "AFNetworking.h"
 #import "ReachabilityManager.h"
+#import "SlideNavigationController.h"

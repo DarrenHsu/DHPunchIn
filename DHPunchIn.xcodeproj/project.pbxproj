@@ -15,8 +15,17 @@
 		D05EDC691EC0086300EBCB54 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC5E1EC0086300EBCB54 /* AFURLSessionManager.m */; };
 		D05EDC6A1EC0086300EBCB54 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC611EC0086300EBCB54 /* Reachability.m */; };
 		D05EDC6B1EC0086300EBCB54 /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC631EC0086300EBCB54 /* ReachabilityManager.m */; };
+		D05EDC721EC0258000EBCB54 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC711EC0258000EBCB54 /* Staff.swift */; };
+		D05EDC971EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC8C1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.m */; };
+		D05EDC981EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC8E1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.m */; };
+		D05EDC991EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC901EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		D05EDC9A1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC921EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		D05EDC9B1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC941EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		D05EDC9C1EC0360300EBCB54 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC961EC0360300EBCB54 /* SlideNavigationController.m */; };
+		D05EDCA01EC0371900EBCB54 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC9F1EC0371900EBCB54 /* MenuViewController.swift */; };
+		D05EDCA21EC0374A00EBCB54 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDCA11EC0374A00EBCB54 /* BaseViewController.swift */; };
+		D05EDCA41EC0385600EBCB54 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDCA31EC0385600EBCB54 /* MainViewController.swift */; };
 		D0B1DDB41EBFF9B900217F53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDB31EBFF9B900217F53 /* AppDelegate.swift */; };
-		D0B1DDB61EBFF9B900217F53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDB51EBFF9B900217F53 /* ViewController.swift */; };
 		D0B1DDB91EBFF9B900217F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B1DDB71EBFF9B900217F53 /* Main.storyboard */; };
 		D0B1DDBB1EBFF9B900217F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B1DDBA1EBFF9B900217F53 /* Assets.xcassets */; };
 		D0B1DDBE1EBFF9B900217F53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B1DDBC1EBFF9B900217F53 /* LaunchScreen.storyboard */; };
@@ -60,9 +69,25 @@
 		D05EDC621EC0086300EBCB54 /* ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityManager.h; sourceTree = "<group>"; };
 		D05EDC631EC0086300EBCB54 /* ReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityManager.m; sourceTree = "<group>"; };
 		D05EDC6C1EC00BB000EBCB54 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		D05EDC711EC0258000EBCB54 /* Staff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		D05EDC8A1EC0360300EBCB54 /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
+		D05EDC8B1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
+		D05EDC8C1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
+		D05EDC8D1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScale.h; sourceTree = "<group>"; };
+		D05EDC8E1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScale.m; sourceTree = "<group>"; };
+		D05EDC8F1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = "<group>"; };
+		D05EDC901EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = "<group>"; };
+		D05EDC911EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlide.h; sourceTree = "<group>"; };
+		D05EDC921EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlide.m; sourceTree = "<group>"; };
+		D05EDC931EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = "<group>"; };
+		D05EDC941EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = "<group>"; };
+		D05EDC951EC0360300EBCB54 /* SlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationController.h; sourceTree = "<group>"; };
+		D05EDC961EC0360300EBCB54 /* SlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationController.m; sourceTree = "<group>"; };
+		D05EDC9F1EC0371900EBCB54 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D05EDCA11EC0374A00EBCB54 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D05EDCA31EC0385600EBCB54 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0B1DDB01EBFF9B900217F53 /* DHPunchIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHPunchIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B1DDB31EBFF9B900217F53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0B1DDB51EBFF9B900217F53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0B1DDB81EBFF9B900217F53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0B1DDBA1EBFF9B900217F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B1DDBD1EBFF9B900217F53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +128,9 @@
 		D05EDC4F1EC005C100EBCB54 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D05EDC9D1EC0369800EBCB54 /* View */,
+				D05EDC9E1EC0369800EBCB54 /* ViewController */,
+				D05EDC701EC0253600EBCB54 /* Model */,
 				D05EDC6C1EC00BB000EBCB54 /* Bridging-Header.h */,
 			);
 			path = Classes;
@@ -111,6 +139,7 @@
 		D05EDC501EC005C100EBCB54 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D05EDC881EC0360300EBCB54 /* SlideController */,
 				D05EDC511EC0086300EBCB54 /* AFNetworking */,
 				D05EDC5F1EC0086300EBCB54 /* Reachability */,
 			);
@@ -148,6 +177,59 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		D05EDC701EC0253600EBCB54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDC711EC0258000EBCB54 /* Staff.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D05EDC881EC0360300EBCB54 /* SlideController */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDC891EC0360300EBCB54 /* Animations */,
+				D05EDC951EC0360300EBCB54 /* SlideNavigationController.h */,
+				D05EDC961EC0360300EBCB54 /* SlideNavigationController.m */,
+			);
+			path = SlideController;
+			sourceTree = "<group>";
+		};
+		D05EDC891EC0360300EBCB54 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDC8A1EC0360300EBCB54 /* SlideNavigationContorllerAnimator.h */,
+				D05EDC8B1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.h */,
+				D05EDC8C1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.m */,
+				D05EDC8D1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.h */,
+				D05EDC8E1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.m */,
+				D05EDC8F1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
+				D05EDC901EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
+				D05EDC911EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlide.h */,
+				D05EDC921EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlide.m */,
+				D05EDC931EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
+				D05EDC941EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D05EDC9D1EC0369800EBCB54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D05EDC9E1EC0369800EBCB54 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDCA11EC0374A00EBCB54 /* BaseViewController.swift */,
+				D05EDC9F1EC0371900EBCB54 /* MenuViewController.swift */,
+				D05EDCA31EC0385600EBCB54 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		D0B1DDA71EBFF9B900217F53 = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +256,6 @@
 				D05EDC4F1EC005C100EBCB54 /* Classes */,
 				D05EDC501EC005C100EBCB54 /* Library */,
 				D0B1DDB31EBFF9B900217F53 /* AppDelegate.swift */,
-				D0B1DDB51EBFF9B900217F53 /* ViewController.swift */,
 				D0B1DDB71EBFF9B900217F53 /* Main.storyboard */,
 				D0B1DDBA1EBFF9B900217F53 /* Assets.xcassets */,
 				D0B1DDBC1EBFF9B900217F53 /* LaunchScreen.storyboard */,
@@ -338,16 +419,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05EDC9C1EC0360300EBCB54 /* SlideNavigationController.m in Sources */,
 				D05EDC641EC0086300EBCB54 /* AFHTTPSessionManager.m in Sources */,
 				D05EDC691EC0086300EBCB54 /* AFURLSessionManager.m in Sources */,
+				D05EDC9A1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				D05EDCA21EC0374A00EBCB54 /* BaseViewController.swift in Sources */,
+				D05EDC721EC0258000EBCB54 /* Staff.swift in Sources */,
 				D05EDC661EC0086300EBCB54 /* AFSecurityPolicy.m in Sources */,
-				D0B1DDB61EBFF9B900217F53 /* ViewController.swift in Sources */,
 				D05EDC671EC0086300EBCB54 /* AFURLRequestSerialization.m in Sources */,
+				D05EDC971EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				D05EDC651EC0086300EBCB54 /* AFNetworkReachabilityManager.m in Sources */,
 				D05EDC6B1EC0086300EBCB54 /* ReachabilityManager.m in Sources */,
+				D05EDC991EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				D05EDC681EC0086300EBCB54 /* AFURLResponseSerialization.m in Sources */,
+				D05EDCA01EC0371900EBCB54 /* MenuViewController.swift in Sources */,
 				D05EDC6A1EC0086300EBCB54 /* Reachability.m in Sources */,
 				D0B1DDB41EBFF9B900217F53 /* AppDelegate.swift in Sources */,
+				D05EDC9B1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				D05EDC981EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				D05EDCA41EC0385600EBCB54 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,6 +31,9 @@
 		D0B1DDBE1EBFF9B900217F53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B1DDBC1EBFF9B900217F53 /* LaunchScreen.storyboard */; };
 		D0B1DDC91EBFF9BA00217F53 /* DHPunchInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDC81EBFF9BA00217F53 /* DHPunchInTests.swift */; };
 		D0B1DDD41EBFF9BA00217F53 /* DHPunchInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDD31EBFF9BA00217F53 /* DHPunchInUITests.swift */; };
+		D0B7DB1B1EC0A03700183FA1 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7DB1A1EC0A03700183FA1 /* AppManager.swift */; };
+		D0B7DB1D1EC0A04200183FA1 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7DB1C1EC0A04200183FA1 /* FeedManager.swift */; };
+		D0B7DB1F1EC0A0FF00183FA1 /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7DB1E1EC0A0FF00183FA1 /* UIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		D0B1DDCF1EBFF9BA00217F53 /* DHPunchInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHPunchInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B1DDD31EBFF9BA00217F53 /* DHPunchInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHPunchInUITests.swift; sourceTree = "<group>"; };
 		D0B1DDD51EBFF9BA00217F53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B7DB1A1EC0A03700183FA1 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		D0B7DB1C1EC0A04200183FA1 /* FeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
+		D0B7DB1E1EC0A0FF00183FA1 /* UIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +134,10 @@
 		D05EDC4F1EC005C100EBCB54 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7DB191EC0A01A00183FA1 /* Manager */,
+				D05EDC701EC0253600EBCB54 /* Model */,
 				D05EDC9D1EC0369800EBCB54 /* View */,
 				D05EDC9E1EC0369800EBCB54 /* ViewController */,
-				D05EDC701EC0253600EBCB54 /* Model */,
 				D05EDC6C1EC00BB000EBCB54 /* Bridging-Header.h */,
 			);
 			path = Classes;
@@ -282,6 +289,16 @@
 			path = DHPunchInUITests;
 			sourceTree = "<group>";
 		};
+		D0B7DB191EC0A01A00183FA1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D0B7DB1A1EC0A03700183FA1 /* AppManager.swift */,
+				D0B7DB1C1EC0A04200183FA1 /* FeedManager.swift */,
+				D0B7DB1E1EC0A0FF00183FA1 /* UIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,12 +447,15 @@
 				D05EDC971EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				D05EDC651EC0086300EBCB54 /* AFNetworkReachabilityManager.m in Sources */,
 				D05EDC6B1EC0086300EBCB54 /* ReachabilityManager.m in Sources */,
+				D0B7DB1F1EC0A0FF00183FA1 /* UIManager.swift in Sources */,
+				D0B7DB1B1EC0A03700183FA1 /* AppManager.swift in Sources */,
 				D05EDC991EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				D05EDC681EC0086300EBCB54 /* AFURLResponseSerialization.m in Sources */,
 				D05EDCA01EC0371900EBCB54 /* MenuViewController.swift in Sources */,
 				D05EDC6A1EC0086300EBCB54 /* Reachability.m in Sources */,
 				D0B1DDB41EBFF9B900217F53 /* AppDelegate.swift in Sources */,
 				D05EDC9B1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				D0B7DB1D1EC0A04200183FA1 /* FeedManager.swift in Sources */,
 				D05EDC981EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				D05EDCA41EC0385600EBCB54 /* MainViewController.swift in Sources */,
 			);

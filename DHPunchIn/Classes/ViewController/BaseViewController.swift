@@ -9,6 +9,10 @@
 import UIKit
 
 class BaseViewController: UIViewController, SlideNavigationControllerDelegate {
+    
+    let ui = UIManager.sharedInstance()
+    let feed = FeedManager.sharedInstance()
+    let app = AppManager.sharedInstance()
 
     override func viewDidLoad() {
         super.viewDidLoad()

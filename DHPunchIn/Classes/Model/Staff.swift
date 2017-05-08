@@ -10,5 +10,17 @@ import UIKit
 
 class Staff: NSObject {
     
-
+    var staffId: String?
+    var name: String?
+    var seatArea: String?
+    var startTime: String?
+    var endTime: String?
+    var photoURL: String?
+    
+    static func conver(dict: [String: Any]) -> Staff {
+        let staff = Staff()
+        staff.setValuesForKeys(dict)
+        
+        return staff
+    }
 }

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05EDC641EC0086300EBCB54 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC531EC0086300EBCB54 /* AFHTTPSessionManager.m */; };
+		D05EDC651EC0086300EBCB54 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC561EC0086300EBCB54 /* AFNetworkReachabilityManager.m */; };
+		D05EDC661EC0086300EBCB54 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC581EC0086300EBCB54 /* AFSecurityPolicy.m */; };
+		D05EDC671EC0086300EBCB54 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC5A1EC0086300EBCB54 /* AFURLRequestSerialization.m */; };
+		D05EDC681EC0086300EBCB54 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC5C1EC0086300EBCB54 /* AFURLResponseSerialization.m */; };
+		D05EDC691EC0086300EBCB54 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC5E1EC0086300EBCB54 /* AFURLSessionManager.m */; };
+		D05EDC6A1EC0086300EBCB54 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC611EC0086300EBCB54 /* Reachability.m */; };
+		D05EDC6B1EC0086300EBCB54 /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC631EC0086300EBCB54 /* ReachabilityManager.m */; };
 		D0B1DDB41EBFF9B900217F53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDB31EBFF9B900217F53 /* AppDelegate.swift */; };
 		D0B1DDB61EBFF9B900217F53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDB51EBFF9B900217F53 /* ViewController.swift */; };
 		D0B1DDB91EBFF9B900217F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B1DDB71EBFF9B900217F53 /* Main.storyboard */; };
@@ -34,6 +42,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D05EDC521EC0086300EBCB54 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		D05EDC531EC0086300EBCB54 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		D05EDC541EC0086300EBCB54 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		D05EDC551EC0086300EBCB54 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		D05EDC561EC0086300EBCB54 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		D05EDC571EC0086300EBCB54 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		D05EDC581EC0086300EBCB54 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		D05EDC591EC0086300EBCB54 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		D05EDC5A1EC0086300EBCB54 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		D05EDC5B1EC0086300EBCB54 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		D05EDC5C1EC0086300EBCB54 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		D05EDC5D1EC0086300EBCB54 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		D05EDC5E1EC0086300EBCB54 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		D05EDC601EC0086300EBCB54 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		D05EDC611EC0086300EBCB54 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		D05EDC621EC0086300EBCB54 /* ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityManager.h; sourceTree = "<group>"; };
+		D05EDC631EC0086300EBCB54 /* ReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityManager.m; sourceTree = "<group>"; };
+		D05EDC6C1EC00BB000EBCB54 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D0B1DDB01EBFF9B900217F53 /* DHPunchIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHPunchIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B1DDB31EBFF9B900217F53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B1DDB51EBFF9B900217F53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +100,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D05EDC4F1EC005C100EBCB54 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDC6C1EC00BB000EBCB54 /* Bridging-Header.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D05EDC501EC005C100EBCB54 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDC511EC0086300EBCB54 /* AFNetworking */,
+				D05EDC5F1EC0086300EBCB54 /* Reachability */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D05EDC511EC0086300EBCB54 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDC521EC0086300EBCB54 /* AFHTTPSessionManager.h */,
+				D05EDC531EC0086300EBCB54 /* AFHTTPSessionManager.m */,
+				D05EDC541EC0086300EBCB54 /* AFNetworking.h */,
+				D05EDC551EC0086300EBCB54 /* AFNetworkReachabilityManager.h */,
+				D05EDC561EC0086300EBCB54 /* AFNetworkReachabilityManager.m */,
+				D05EDC571EC0086300EBCB54 /* AFSecurityPolicy.h */,
+				D05EDC581EC0086300EBCB54 /* AFSecurityPolicy.m */,
+				D05EDC591EC0086300EBCB54 /* AFURLRequestSerialization.h */,
+				D05EDC5A1EC0086300EBCB54 /* AFURLRequestSerialization.m */,
+				D05EDC5B1EC0086300EBCB54 /* AFURLResponseSerialization.h */,
+				D05EDC5C1EC0086300EBCB54 /* AFURLResponseSerialization.m */,
+				D05EDC5D1EC0086300EBCB54 /* AFURLSessionManager.h */,
+				D05EDC5E1EC0086300EBCB54 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		D05EDC5F1EC0086300EBCB54 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDC601EC0086300EBCB54 /* Reachability.h */,
+				D05EDC611EC0086300EBCB54 /* Reachability.m */,
+				D05EDC621EC0086300EBCB54 /* ReachabilityManager.h */,
+				D05EDC631EC0086300EBCB54 /* ReachabilityManager.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		D0B1DDA71EBFF9B900217F53 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +171,8 @@
 		D0B1DDB21EBFF9B900217F53 /* DHPunchIn */ = {
 			isa = PBXGroup;
 			children = (
+				D05EDC4F1EC005C100EBCB54 /* Classes */,
+				D05EDC501EC005C100EBCB54 /* Library */,
 				D0B1DDB31EBFF9B900217F53 /* AppDelegate.swift */,
 				D0B1DDB51EBFF9B900217F53 /* ViewController.swift */,
 				D0B1DDB71EBFF9B900217F53 /* Main.storyboard */,
@@ -194,7 +270,7 @@
 					D0B1DDAF1EBFF9B900217F53 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 796PUW3YDR;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D0B1DDC31EBFF9B900217F53 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -262,7 +338,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05EDC641EC0086300EBCB54 /* AFHTTPSessionManager.m in Sources */,
+				D05EDC691EC0086300EBCB54 /* AFURLSessionManager.m in Sources */,
+				D05EDC661EC0086300EBCB54 /* AFSecurityPolicy.m in Sources */,
 				D0B1DDB61EBFF9B900217F53 /* ViewController.swift in Sources */,
+				D05EDC671EC0086300EBCB54 /* AFURLRequestSerialization.m in Sources */,
+				D05EDC651EC0086300EBCB54 /* AFNetworkReachabilityManager.m in Sources */,
+				D05EDC6B1EC0086300EBCB54 /* ReachabilityManager.m in Sources */,
+				D05EDC681EC0086300EBCB54 /* AFURLResponseSerialization.m in Sources */,
+				D05EDC6A1EC0086300EBCB54 /* Reachability.m in Sources */,
 				D0B1DDB41EBFF9B900217F53 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +506,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.dh.test.DHPunchIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a0ae3365-43f0-45f2-89b9-df8736ca5227";
+				PROVISIONING_PROFILE_SPECIFIER = iOS_Development;
+				SWIFT_OBJC_BRIDGING_HEADER = "DHPunchIn/Classes/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -435,7 +523,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.dh.test.DHPunchIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a0ae3365-43f0-45f2-89b9-df8736ca5227";
+				PROVISIONING_PROFILE_SPECIFIER = iOS_Development;
+				SWIFT_OBJC_BRIDGING_HEADER = "DHPunchIn/Classes/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -516,6 +608,7 @@
 				D0B1DDDA1EBFF9BA00217F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0B1DDDB1EBFF9BA00217F53 /* Build configuration list for PBXNativeTarget "DHPunchInTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +617,7 @@
 				D0B1DDDD1EBFF9BA00217F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0B1DDDE1EBFF9BA00217F53 /* Build configuration list for PBXNativeTarget "DHPunchInUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +626,7 @@
 				D0B1DDE01EBFF9BA00217F53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,16 +15,18 @@ class MenuTableViewCell : UITableViewCell {
 
 class MenuViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var statusView : UIView?
     @IBOutlet weak var menuTableView : UITableView?
 
-    var functionName : [String] = ["取得圖片","員工註冊"]
-    var functionImage : [String] = ["ic_font_download","ic_add_to_photos"]
+    var functionName : [String] = ["打卡","員工註冊","地圖"]
+    var functionImage : [String] = ["ic_punch_card","ic_staff","ic_map"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        menuTableView?.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.3)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,14 +48,19 @@ class MenuViewController : UIViewController, UITableViewDataSource, UITableViewD
 
     // MARK: - UITableDelegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var controller : BaseViewController?
+        var controller: BaseViewController?
         switch (indexPath as NSIndexPath).row {
         case 0:
+            controller = storyboard?.instantiateViewController(withIdentifier: "PunchInViewController") as! PunchInViewController
+            break
+        case 1:
+            controller = storyboard?.instantiateViewController(withIdentifier: "StaffSignViewController") as! StaffSignViewController
             break
         default:
-            break
+            controller = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
         }
-
+        
+        controller?.title = functionName[(indexPath as NSIndexPath).row]
         SlideNavigationController.sharedInstance()!.popAllAndSwitch(to: controller, withSlideOutAnimation: false, andCompletion: nil);
     }
 

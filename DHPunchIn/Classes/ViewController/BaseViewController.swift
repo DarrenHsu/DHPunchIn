@@ -14,7 +14,7 @@ class BaseViewController: UIViewController, SlideNavigationControllerDelegate {
     let feed = FeedManager.sharedInstance()
     let app = AppManager.sharedInstance()
     let location = LocationManager.sharedInstance()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

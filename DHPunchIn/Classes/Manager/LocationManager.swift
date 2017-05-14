@@ -16,6 +16,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var locationStatus: String?
     private var manager: CLLocationManager!
     public var currentCoordinate: CLLocationCoordinate2D?
+    public dynamic var updateCount = 0
     
     public static func sharedInstance() -> LocationManager {
         if _manager == nil {
@@ -54,8 +55,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         let locationArray = locations as NSArray
         let locationObj = locationArray.lastObject as! CLLocation
         currentCoordinate = locationObj.coordinate
+        updateCount += 1
         
-        print("\((currentCoordinate?.latitude)!) , \((currentCoordinate?.longitude)!)")
+        print("\(updateCount) \((currentCoordinate?.latitude)!) , \((currentCoordinate?.longitude)!)")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

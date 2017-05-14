@@ -18,8 +18,8 @@ class MenuViewController : UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var statusView : UIView?
     @IBOutlet weak var menuTableView : UITableView?
 
-    var functionName : [String] = ["打卡","員工註冊","地圖"]
-    var functionImage : [String] = ["ic_punch_card","ic_staff","ic_map"]
+    var functionName : [String] = ["現在位置","打卡","員工註冊"]
+    var functionImage : [String] = ["ic_map","ic_punch_card","ic_staff"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +50,14 @@ class MenuViewController : UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var controller: BaseViewController?
         switch (indexPath as NSIndexPath).row {
-        case 0:
+        case 1:
             controller = storyboard?.instantiateViewController(withIdentifier: "PunchInViewController") as! PunchInViewController
             break
-        case 1:
+        case 2:
             controller = storyboard?.instantiateViewController(withIdentifier: "StaffSignViewController") as! StaffSignViewController
             break
         default:
-            controller = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+            controller = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         }
         
         controller?.title = functionName[(indexPath as NSIndexPath).row]

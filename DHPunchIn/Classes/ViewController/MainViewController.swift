@@ -11,7 +11,10 @@ import GoogleMaps
 
 class MainViewController: BaseViewController, GMSMapViewDelegate {
     
+    @IBOutlet var baseView: UIView?
     @IBOutlet var mapBaseView: UIView?
+    @IBOutlet var staffBaseView: UIView?
+    @IBOutlet var punchCardButton: UIButton?
     
     var mapManager = MapManager.sharedInstance()
     var mapView: GMSMapView!
@@ -21,6 +24,21 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
         super.viewDidLoad()
         
         self.title = "現在位置"
+        
+        baseView?.layer.borderColor = UIColor.lightGray.cgColor
+        baseView?.layer.borderWidth = 1
+        baseView?.layer.cornerRadius = 10
+        baseView?.layer.masksToBounds = true
+        
+        staffBaseView?.layer.borderColor = UIColor.lightGray.cgColor
+        staffBaseView?.layer.borderWidth = 1
+        staffBaseView?.layer.cornerRadius = 10
+        staffBaseView?.layer.masksToBounds = true
+        
+        punchCardButton?.layer.borderColor = UIColor.lightGray.cgColor
+        punchCardButton?.layer.borderWidth = 1
+        punchCardButton?.layer.cornerRadius = 10
+        punchCardButton?.layer.masksToBounds = true
         
         mapView = GMSMapView(frame: (mapBaseView?.bounds)!)
         mapView.isMyLocationEnabled = true
@@ -57,8 +75,9 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
     }
     
     func addMark() {
+        let icon = UIImage(named: "ic_staff")?.resizeImage(newWidth: 50)
         if marker == nil {
-            marker = mapManager.draw(mapView, icon: nil, title: "Staff", snippet: nil, coordinate: self.location.currentCoordinate!)
+            marker = mapManager.draw(mapView, icon: icon, title: "Staff", snippet: nil, coordinate: self.location.currentCoordinate!)
         }
     }
     

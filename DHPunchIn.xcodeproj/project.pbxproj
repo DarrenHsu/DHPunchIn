@@ -11,7 +11,6 @@
 		1A636C1A0D5E6EB3676A73D3 /* Pods_DHPunchIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB428BD6FB6AE337D6F956F0 /* Pods_DHPunchIn.framework */; };
 		D033D7101EC40A5300D04B85 /* StaffSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D033D70F1EC40A5300D04B85 /* StaffSignViewController.swift */; };
 		D033D7121EC40A8000D04B85 /* PunchInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D033D7111EC40A8000D04B85 /* PunchInViewController.swift */; };
-		D033D7141EC40E1E00D04B85 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D033D7131EC40E1E00D04B85 /* MapViewController.swift */; };
 		D033D7161EC430E900D04B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D033D7151EC430E900D04B85 /* Assets.xcassets */; };
 		D033D7181EC4398800D04B85 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D033D7171EC4398800D04B85 /* LocationManager.swift */; };
 		D05EDC641EC0086300EBCB54 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC531EC0086300EBCB54 /* AFHTTPSessionManager.m */; };
@@ -85,7 +84,6 @@
 		BF90DEE49187FD07D0802D70 /* Pods_DHPunchInUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHPunchInUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D033D70F1EC40A5300D04B85 /* StaffSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffSignViewController.swift; sourceTree = "<group>"; };
 		D033D7111EC40A8000D04B85 /* PunchInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunchInViewController.swift; sourceTree = "<group>"; };
-		D033D7131EC40E1E00D04B85 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D033D7151EC430E900D04B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D033D7171EC4398800D04B85 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D05EDC521EC0086300EBCB54 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 				D05EDCA31EC0385600EBCB54 /* MainViewController.swift */,
 				D033D7111EC40A8000D04B85 /* PunchInViewController.swift */,
 				D033D70F1EC40A5300D04B85 /* StaffSignViewController.swift */,
-				D033D7131EC40E1E00D04B85 /* MapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -669,7 +666,6 @@
 				D05EDC721EC0258000EBCB54 /* Staff.swift in Sources */,
 				D05EDC661EC0086300EBCB54 /* AFSecurityPolicy.m in Sources */,
 				D05EDC671EC0086300EBCB54 /* AFURLRequestSerialization.m in Sources */,
-				D033D7141EC40E1E00D04B85 /* MapViewController.swift in Sources */,
 				D05EDC971EC0360300EBCB54 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				D033D7101EC40A5300D04B85 /* StaffSignViewController.swift in Sources */,
 				D033D7121EC40A8000D04B85 /* PunchInViewController.swift in Sources */,

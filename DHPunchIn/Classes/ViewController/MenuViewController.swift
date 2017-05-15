@@ -18,7 +18,7 @@ class MenuViewController : UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var statusView : UIView?
     @IBOutlet weak var menuTableView : UITableView?
 
-    var functionName : [String] = ["現在位置","打卡","員工註冊"]
+    var functionName : [String] = ["現在位置","打卡","員工資訊"]
     var functionImage : [String] = ["ic_map","ic_punch_card","ic_staff"]
 
     override func viewDidLoad() {

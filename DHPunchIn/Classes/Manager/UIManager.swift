@@ -26,7 +26,7 @@ extension UIImage {
 }
 
 class UIManager: NSObject {
-
+    
     private static var _manager: UIManager?
     
     public static func sharedInstance() -> UIManager {
@@ -34,6 +34,40 @@ class UIManager: NSObject {
             _manager = UIManager()
         }
         return _manager!
+    }
+    
+    private var loading: CircleLoading!
+    private var loadingSuperView: UIView!
+    private var loadingLabel: UILabel!
+    
+    override init() {
+        loadingSuperView = UIView()
+        
+        loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 70, height: 30))
+        
+        loading = CircleLoading(frame: CGRect(x: 0, y: 0, width: 130, height: 130))
+        loading.colors(color1: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), color2: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), color3: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
+        
+        loadingLabel.text = "Loading..."
+        loadingLabel.textColor = #colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)
+    }
+    
+    public func startLoading(_ view: UIView) {
+        loadingSuperView.frame = view.bounds
+        
+        loading.center = loadingSuperView.center
+        loading.start()
+        loadingSuperView.addSubview(loading)
+        
+        loadingLabel.center = loadingSuperView.center
+        loadingSuperView.addSubview(loadingLabel)
+        
+        view.addSubview(loadingSuperView)
+    }
+    
+    public func stopLoading() {
+        loading.stop()
+        loadingSuperView.removeFromSuperview()
     }
     
     public func showAlert(_ msg: String, controller: UIViewController) {

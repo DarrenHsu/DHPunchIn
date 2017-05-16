@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StaffSignViewController: BaseViewController {
+class StaffSignViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet var baseView: UIView?
     @IBOutlet var resteButton: UIButton?
@@ -17,7 +17,9 @@ class StaffSignViewController: BaseViewController {
     @IBOutlet var noField: UITextField?
     @IBOutlet var nameField: UITextField?
     @IBOutlet var areaField: UITextField?
+    @IBOutlet var startLabel: UILabel?
     @IBOutlet var startField: UITextField?
+    @IBOutlet var endLabel: UILabel?
     @IBOutlet var endField: UITextField?
     
     @IBAction func restPressed(button: UIButton) {
@@ -57,7 +59,6 @@ class StaffSignViewController: BaseViewController {
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tapGesture))
         self.view.addGestureRecognizer(gesture)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,5 +69,28 @@ class StaffSignViewController: BaseViewController {
     func tapGesture() {
         self.view.endEditing(false)
     }
+    
+    func showDatePicker(_ field: UITextField, title: String?) {
+        let controller = TimePickerViewController.pop(self, view: field, title: title)
+        
+        controller.doneProcess = {(_controller, _date) in
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            field.text = dateFormatter.string(from: _date)
+        }
+    }
+    
+    //MARK: - UITextFieldDelegate Methods
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == startField {
+            self.showDatePicker(textField, title: startLabel?.text)
+            return false
+        }else if textField == endField {
+            self.showDatePicker(textField, title: endLabel?.text)
+            return false
+        }
+        return true
+    }
+    
     
 }

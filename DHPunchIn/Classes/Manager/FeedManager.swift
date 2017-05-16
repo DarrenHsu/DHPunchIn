@@ -18,5 +18,4 @@ class FeedManager: NSObject {
         }
         return _manager!
     }
-    
 }

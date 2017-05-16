@@ -9,6 +9,7 @@ target 'DHPunchIn' do
 
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'AFNetworking', '~> 3.0'
 
   # Pods for DHPunchIn
 

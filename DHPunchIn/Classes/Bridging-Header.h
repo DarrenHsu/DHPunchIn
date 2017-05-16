@@ -6,6 +6,5 @@
 //  Copyright © 2017 SKL. All rights reserved.
 //
 
-#import "AFNetworking.h"
 #import "ReachabilityManager.h"
 #import "SlideNavigationController.h"

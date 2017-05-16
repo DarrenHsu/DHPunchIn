@@ -54,8 +54,6 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
         location.addObserver(self, forKeyPath:"updateCount", options:.new, context: nil)
         
         mapView.frame = (mapBaseView?.bounds)!
-        
-        ui.startLoading(self.view)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

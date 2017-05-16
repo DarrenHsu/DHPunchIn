@@ -40,27 +40,21 @@ class UIManager: NSObject {
     private var loadingSuperView: UIView!
     private var loadingLabel: UILabel!
     
-    override init() {
-        loadingSuperView = UIView()
+    public func startLoading(_ view: UIView) {
+        loadingSuperView = UIView(frame: view.bounds)
         
         loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 70, height: 30))
+        loadingLabel.text = "Loading..."
+        loadingLabel.textColor = #colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)
+        loadingLabel.center = loadingSuperView.center
+        loadingSuperView.addSubview(loadingLabel)
         
         loading = CircleLoading(frame: CGRect(x: 0, y: 0, width: 130, height: 130))
         loading.colors(color1: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), color2: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), color3: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
-        
-        loadingLabel.text = "Loading..."
-        loadingLabel.textColor = #colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)
-    }
-    
-    public func startLoading(_ view: UIView) {
-        loadingSuperView.frame = view.bounds
-        
         loading.center = loadingSuperView.center
         loading.start()
-        loadingSuperView.addSubview(loading)
         
-        loadingLabel.center = loadingSuperView.center
-        loadingSuperView.addSubview(loadingLabel)
+        loadingSuperView.addSubview(loading)
         
         view.addSubview(loadingSuperView)
     }

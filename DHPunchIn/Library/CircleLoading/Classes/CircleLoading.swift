@@ -108,31 +108,31 @@ public class CircleLoading: UIView {
         let baseWidth: CGFloat = 6.0 * self.bounds.width / 60
 
         let r1 = self.bounds.size.width / 2
-        c1 = createCircle(radius: r1, lineWidth: baseWidth, startAngle: CGFloat(M_PI * 0.8), endAngle: CGFloat(M_PI * 1.2), color: color1.withAlphaComponent(0.5))
+        c1 = createCircle(radius: r1, lineWidth: baseWidth, startAngle: CGFloat(.pi * 0.8), endAngle: CGFloat(.pi * 1.2), color: color1.withAlphaComponent(0.5))
         
         let r2 = self.bounds.size.width / 2 - baseWidth * 0.5
-        c2 = createCircle(radius: r2, lineWidth: baseWidth * 0.5, startAngle: CGFloat(M_PI * 0.4), endAngle: CGFloat(M_PI * 1.3), color: color2.withAlphaComponent(0.5))
+        c2 = createCircle(radius: r2, lineWidth: baseWidth * 0.5, startAngle: CGFloat(.pi * 0.4), endAngle: CGFloat(.pi * 1.3), color: color2.withAlphaComponent(0.5))
         
         let r3 = self.bounds.size.width / 2 - baseWidth - 1
-        c3 = createCircle(radius: r3, lineWidth: baseWidth, startAngle: CGFloat(M_PI * 0.35), endAngle: CGFloat(M_PI * 1.1), color: color1.withAlphaComponent(0.6))
+        c3 = createCircle(radius: r3, lineWidth: baseWidth, startAngle: CGFloat(.pi * 0.35), endAngle: CGFloat(.pi * 1.1), color: color1.withAlphaComponent(0.6))
         
         let r4 = self.bounds.size.width / 2 - baseWidth * 1.25
-        c4 = createCircle(radius: r4, lineWidth: baseWidth * 0.5, startAngle: CGFloat(M_PI * 0.2), endAngle: CGFloat(M_PI * 0.9), color: color1.withAlphaComponent(0.6))
+        c4 = createCircle(radius: r4, lineWidth: baseWidth * 0.5, startAngle: CGFloat(.pi * 0.2), endAngle: CGFloat(.pi * 0.9), color: color1.withAlphaComponent(0.6))
         
         let r5 = self.bounds.size.width / 2 - baseWidth * 0.3
-        c5 = createCircle(radius: r5, lineWidth: baseWidth, startAngle: CGFloat(M_PI * 0.25), endAngle: CGFloat(M_PI * 0.7), color: color1.withAlphaComponent(0.4))
+        c5 = createCircle(radius: r5, lineWidth: baseWidth, startAngle: CGFloat(.pi * 0.25), endAngle: CGFloat(.pi * 0.7), color: color1.withAlphaComponent(0.4))
         
         let r6 = self.bounds.size.width / 2 - baseWidth - 1
-        c6 = createCircle(radius: r6, lineWidth: baseWidth * 0.5, startAngle: CGFloat(-M_PI * 0.2), endAngle: CGFloat(M_PI * 0.45), color: color3.withAlphaComponent(0.8))
+        c6 = createCircle(radius: r6, lineWidth: baseWidth * 0.5, startAngle: CGFloat(-.pi * 0.2), endAngle: CGFloat(.pi * 0.45), color: color3.withAlphaComponent(0.8))
         
         let r7 = self.bounds.size.width / 2 - baseWidth * 0.6
-        c7 = createCircle(radius: r7, lineWidth: baseWidth * 0.8, startAngle: CGFloat(-M_PI * 0.1), endAngle: CGFloat(M_PI * 0.2), color: color3.withAlphaComponent(0.8))
+        c7 = createCircle(radius: r7, lineWidth: baseWidth * 0.8, startAngle: CGFloat(-.pi * 0.1), endAngle: CGFloat(.pi * 0.2), color: color3.withAlphaComponent(0.8))
         
         let r8 = self.bounds.size.width / 2 - baseWidth * 0.2
-        c8 = createCircle(radius: r8, lineWidth: baseWidth * 0.8, startAngle: CGFloat(-M_PI * 0.6), endAngle: CGFloat(0), color: color1.withAlphaComponent(0.8))
+        c8 = createCircle(radius: r8, lineWidth: baseWidth * 0.8, startAngle: CGFloat(-.pi * 0.6), endAngle: CGFloat(0), color: color1.withAlphaComponent(0.8))
         
         let r9 = self.bounds.size.width / 2 - baseWidth * 0.5
-        c9 = createCircle(radius: r9, lineWidth: 1, startAngle: CGFloat(-M_PI * 0.4), endAngle: CGFloat(-M_PI * 0.2), color: UIColor.white)
+        c9 = createCircle(radius: r9, lineWidth: 1, startAngle: CGFloat(-.pi * 0.4), endAngle: CGFloat(-.pi * 0.2), color: UIColor.white)
         
         self.layer.addSublayer(c2)
         self.layer.addSublayer(c1)
@@ -166,7 +166,7 @@ public class CircleLoading: UIView {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.duration = duration
         animation.fromValue = 0.0
-        animation.toValue = CGFloat(direction * M_PI * 2)
+        animation.toValue = CGFloat(direction * .pi * 2)
         animation.repeatCount = HUGE
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         return animation

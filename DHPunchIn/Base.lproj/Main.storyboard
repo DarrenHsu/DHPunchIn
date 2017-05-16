@@ -549,7 +549,9 @@
                                     <constraint firstAttribute="height" constant="34" id="dUq-B1-1p5"/>
                                     <constraint firstAttribute="width" constant="65" id="djv-ag-TRW"/>
                                 </constraints>
-                                <state key="normal" title="確定"/>
+                                <state key="normal" title="確定">
+                                    <color key="titleColor" red="0.040663327319999998" green="0.76619075640000001" blue="0.18047334170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="donePressedWithButton:" destination="6nw-xz-qcQ" eventType="touchUpInside" id="5fH-ti-hTT"/>
                                 </connections>
@@ -560,7 +562,9 @@
                                     <constraint firstAttribute="height" constant="34" id="MJB-lI-ebQ"/>
                                     <constraint firstAttribute="width" constant="65" id="Pkw-7F-LKx"/>
                                 </constraints>
-                                <state key="normal" title="取消"/>
+                                <state key="normal" title="取消">
+                                    <color key="titleColor" red="0.040663327319999998" green="0.76619075640000001" blue="0.18047334170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelPressedWithButton:" destination="6nw-xz-qcQ" eventType="touchUpInside" id="lpD-Gl-xmX"/>
                                 </connections>

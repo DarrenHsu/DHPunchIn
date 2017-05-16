@@ -71,7 +71,7 @@ class StaffSignViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func showDatePicker(_ field: UITextField, title: String?) {
-        let controller = TimePickerViewController.pop(self, view: field, title: title)
+        let controller = TimePickerViewController.pop(self, view: field, title: title, timeStr: field.text)
         
         controller.doneProcess = {(_controller, _date) in
             let dateFormatter = DateFormatter()

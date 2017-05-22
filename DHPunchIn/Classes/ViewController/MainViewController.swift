@@ -59,6 +59,7 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
         location.addObserver(self, forKeyPath:"updateCount", options:.new, context: nil)
         
         mapView.frame = (mapBaseView?.bounds)!
+        distancLabel?.text = String(format: "距離： %f", location.calculateDistance())
     }
     
     override func viewDidDisappear(_ animated: Bool) {

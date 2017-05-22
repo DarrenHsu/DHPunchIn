@@ -13,6 +13,7 @@ class PunchInViewController: BaseViewController {
     @IBOutlet var positionView: UIView?
     @IBOutlet var latLabel: UILabel?
     @IBOutlet var longLabel: UILabel?
+    @IBOutlet var imageView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class PunchInViewController: BaseViewController {
         positionView?.layer.masksToBounds = true
         
         loadCoordinate()
+        loadImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,4 +58,18 @@ class PunchInViewController: BaseViewController {
         }
     }
 
+    func loadImage () {
+        if app.staff == nil {
+            return
+        }
+        
+        ui.startLoading(self.view)
+        feed.requestImage((app.staff?.imageUrl)!, success: { (image) in
+            self.imageView?.image = image
+            self.ui.stopLoading()
+        }) {
+            self.ui.stopLoading()
+            
+        }
+    }
 }

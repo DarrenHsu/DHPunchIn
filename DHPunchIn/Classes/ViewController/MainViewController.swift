@@ -15,6 +15,9 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
     @IBOutlet var mapBaseView: UIView?
     @IBOutlet var staffBaseView: UIView?
     @IBOutlet var punchCardButton: UIButton?
+    @IBOutlet var noLable: UILabel?
+    @IBOutlet var nameLabel: UILabel?
+    @IBOutlet var distancLabel: UILabel?
     
     var mapManager = MapManager.sharedInstance()
     var mapView: GMSMapView!
@@ -46,6 +49,8 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
         mapView.delegate = self
         
         mapBaseView?.addSubview(mapView)
+        
+        self.loadDefaultVlue()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,12 +75,28 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "updateCount" {
             mapManager.moveMarker(marker, coordinate: location.currentCoordinate)
+            distancLabel?.text = String(format: "距離： %f", location.calculateDistance())
+        }
+    }
+    
+    func loadDefaultVlue() {
+        if app.staff != nil {
+            ui.startLoading(self.view)
+            feed.requestStaff((app.staff?.staffId)!, success: { (staff) in
+                self.app.saveStaff(staff)
+                self.noLable?.text = self.app.staff?.staffId
+                self.nameLabel?.text = self.app.staff?.name
+                self.ui.stopLoading()
+            }, failure: {
+                self.app.removeStaff()
+                self.ui.stopLoading()
+            })
         }
     }
     
     func addMark() {
         let icon = UIImage(named: "ic_staff")?.resizeImage(newWidth: 50)
-        if marker == nil {
+        if marker == nil && self.location.currentCoordinate != nil {
             marker = mapManager.draw(mapView, icon: icon, title: "Staff", snippet: nil, coordinate: self.location.currentCoordinate!)
         }
     }

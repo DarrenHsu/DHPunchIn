@@ -17,6 +17,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var manager: CLLocationManager!
     public var currentCoordinate: CLLocationCoordinate2D?
     public dynamic var updateCount = 0
+    private let defaultCoordinate = CLLocationCoordinate2D(latitude: 25.0530796100264, longitude: 121.56007485006)
     
     public static func sharedInstance() -> LocationManager {
         if _manager == nil {
@@ -25,22 +26,36 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         return _manager!
     }
     
-    func startLocation() {
+    override init() {
+        manager = CLLocationManager()
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.distanceFilter = 5
+    }
+    
+    public func startLocation() {
         manager.delegate = self
-
+        
         manager.requestAlwaysAuthorization()
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
     
-    func stopLocation() {
+    public func stopLocation() {
         manager.stopUpdatingLocation()
     }
     
-    override init() {
-        manager = CLLocationManager()
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.distanceFilter = 5
+    public func calculateDistance() ->  CLLocationDistance {
+        if currentCoordinate == nil {
+            return 0
+        }
+        
+        return calculateDistance(defaultCoordinate.latitude, lonA: defaultCoordinate.longitude, latB: (currentCoordinate?.latitude)!, lonB: (currentCoordinate?.longitude)!)
+    }
+    
+    private func calculateDistance(_ latA: CLLocationDegrees, lonA: CLLocationDegrees, latB: CLLocationDegrees, lonB: CLLocationDegrees) -> CLLocationDistance {
+        let locationA = CLLocation(latitude: latA, longitude: lonA)
+        let locationB = CLLocation(latitude: latB, longitude: lonB)
+        return locationA.distance(from: locationB)
     }
     
     // MARK: - CLLocationManagerDelegate Methods

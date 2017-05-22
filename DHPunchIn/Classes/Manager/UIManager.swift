@@ -92,8 +92,8 @@ class UIManager: NSObject {
             cancel?()
         }
         
-        alert.addAction(okCallaction)
         alert.addAction(cancelCallaction)
+        alert.addAction(okCallaction)
         controller.present(alert, animated: true, completion: nil)
     }
 }

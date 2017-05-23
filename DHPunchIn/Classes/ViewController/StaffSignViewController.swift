@@ -184,7 +184,6 @@ class StaffSignViewController: BaseViewController, UITextFieldDelegate {
         noField?.isEnabled = app.staff == nil
         uploadButton?.isHidden = app.staff == nil
         addButton?.isHidden = app.staff != nil
-        
     }
     
     func tapGesture() {

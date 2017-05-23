@@ -46,7 +46,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     public func calculateDistance() ->  CLLocationDistance {
         if currentCoordinate == nil {
-            return 0
+            return 999
         }
         
         return calculateDistance(defaultCoordinate.latitude, lonA: defaultCoordinate.longitude, latB: (currentCoordinate?.latitude)!, lonB: (currentCoordinate?.longitude)!)

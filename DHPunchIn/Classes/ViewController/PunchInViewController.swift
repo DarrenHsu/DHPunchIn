@@ -13,6 +13,7 @@ class PunchInViewController: BaseViewController {
     @IBOutlet var positionView: UIView?
     @IBOutlet var latLabel: UILabel?
     @IBOutlet var longLabel: UILabel?
+    @IBOutlet var distanceLabel: UILabel?
     @IBOutlet var imageView: UIImageView?
     
     override func viewDidLoad() {
@@ -55,11 +56,17 @@ class PunchInViewController: BaseViewController {
         if location.currentCoordinate != nil {
             latLabel?.text = String(format: "%f",(location.currentCoordinate?.latitude)!)
             longLabel?.text = String(format: "%f",(location.currentCoordinate?.longitude)!)
+            distanceLabel?.text = String(format: "%zd 公尺", Int(location.calculateDistance()))
         }
     }
 
     func loadImage () {
-        if app.staff == nil {
+        guard location.calculateDistance() < 5 else {
+            ui.showAlert("你目前不在指定區域內!", controller: self)
+            return
+        }
+        
+        guard app.staff != nil else {
             return
         }
         

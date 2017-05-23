@@ -59,7 +59,7 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
         location.addObserver(self, forKeyPath:"updateCount", options:.new, context: nil)
         
         mapView.frame = (mapBaseView?.bounds)!
-        distancLabel?.text = String(format: "距離： %f", location.calculateDistance())
+        distancLabel?.text = String(format: "距離： %zd 公尺", Int(location.calculateDistance()))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -76,7 +76,7 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "updateCount" {
             mapManager.moveMarker(marker, coordinate: location.currentCoordinate)
-            distancLabel?.text = String(format: "距離： %f", location.calculateDistance())
+            distancLabel?.text = String(format: "距離： %zd 公尺", Int(location.calculateDistance()))
         }
     }
     

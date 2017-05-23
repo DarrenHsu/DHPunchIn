@@ -34,7 +34,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     public func startLocation() {
         manager.delegate = self
-        
+        manager.distanceFilter = 5
         manager.requestAlwaysAuthorization()
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()

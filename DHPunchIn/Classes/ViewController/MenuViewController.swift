@@ -19,7 +19,7 @@ class MenuViewController : UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var menuTableView : UITableView?
 
     var functionName : [String] = ["現在位置","打卡","員工資訊", "設定"]
-    var functionImage : [String] = ["ic_map","ic_punch_card","ic_staff", ""]
+    var functionImage : [String] = ["ic_map","ic_punch_card","ic_staff", "ic_setting"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,13 +51,13 @@ class MenuViewController : UIViewController, UITableViewDataSource, UITableViewD
         var controller: BaseViewController?
         switch (indexPath as NSIndexPath).row {
         case 0:
-            controller = storyboard?.instantiateViewController(withIdentifier: "PunchInViewController") as! PunchInViewController
+            controller = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
             break
         case 1:
-            controller = storyboard?.instantiateViewController(withIdentifier: "StaffSignViewController") as! StaffSignViewController
+            controller = storyboard?.instantiateViewController(withIdentifier: "PunchInViewController") as! PunchInViewController
             break
         case 2:
-            controller = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+            controller = storyboard?.instantiateViewController(withIdentifier: "StaffSignViewController") as! StaffSignViewController
             break
         default:
             controller = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController

@@ -38,6 +38,9 @@ class SettingViewController: BaseViewController {
         latField.text = String(format: "%f", location.defaultCoordinate.latitude)
         lonField.text = String(format: "%f", location.defaultCoordinate.longitude)
         dnsTextView.text = String(format: "%@", feed.Dns)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapGesture))
+        self.view.addGestureRecognizer(gesture)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,4 +48,7 @@ class SettingViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func tapGesture() {
+        self.view.endEditing(false)
+    }
 }

@@ -9,8 +9,6 @@
 import UIKit
 import AFNetworking
 
-let DNS_NAME: String = "http://788697ad.ngrok.io/"
-
 extension Data {
     public func length() -> Int {
         var value = [UInt8](repeating:0, count:self.count)
@@ -19,6 +17,8 @@ extension Data {
     }
 }
 
+let DEFAULT_DNS: String = "http://788697ad.ngrok.io/"
+
 class FeedManager: NSObject {
 
     private static var _manager: FeedManager?
@@ -26,11 +26,20 @@ class FeedManager: NSObject {
     public static func sharedInstance() -> FeedManager {
         if _manager == nil {
             _manager = FeedManager()
+            _manager?.resetDns()
         }
         return _manager!
     }
     
+    public var Dns = DEFAULT_DNS
     private let configuration = URLSessionConfiguration.default
+    
+    public func resetDns() {
+        let userDefault = UserDefaults.standard
+        if userDefault.object(forKey: DNS_KEY) != nil {
+            Dns = userDefault.object(forKey: DNS_KEY) as! String
+        }
+    }
     
     public func requestImage(_ urlStr: String, success: ((UIImage) -> ())?, failure: (() ->())?)  {
         let url = URL(string: urlStr)
@@ -50,7 +59,7 @@ class FeedManager: NSObject {
         let dict = staff.toDict();
         let jsonData = try! JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
         
-        let url = URL(string: "\(DNS_NAME)/api/employees/\(staff.staffId!)")
+        let url = URL(string: "\(Dns)/api/employees/\(staff.staffId!)")
         
         var request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         request.httpMethod = "PUT"
@@ -68,7 +77,7 @@ class FeedManager: NSObject {
 
     
     public func requestRemoveStaff(_ staff: Staff, success: ((Staff) -> ())?, failure: (() ->())?)  {
-        let url = URL(string: "\(DNS_NAME)/api/employees/\(staff.staffId!)")
+        let url = URL(string: "\(Dns)/api/employees/\(staff.staffId!)")
         
         var request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         request.httpMethod = "DELETE"
@@ -84,7 +93,7 @@ class FeedManager: NSObject {
 
     
     public func requestStaff(_ staffId: String, success: ((Staff) -> ())?, failure: (() ->())?)  {
-        let url = URL(string: "\(DNS_NAME)/api/employees/\(staffId)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        let url = URL(string: "\(Dns)/api/employees/\(staffId)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
 
         let request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         
@@ -106,7 +115,7 @@ class FeedManager: NSObject {
         let dict = staff.toDict();
         let jsonData = try! JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
         
-        let url = URL(string: "\(DNS_NAME)/api/employees")
+        let url = URL(string: "\(Dns)/api/employees")
         
         var request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         request.httpMethod = "POST"
@@ -123,7 +132,7 @@ class FeedManager: NSObject {
     }
     
     public func requestAllStaff(_ success: (([Staff]?) -> ())?, failure: (() ->())?)  {
-        let url = URL(string: "\(DNS_NAME)/api/employees")
+        let url = URL(string: "\(Dns)/api/employees")
         
         let request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         

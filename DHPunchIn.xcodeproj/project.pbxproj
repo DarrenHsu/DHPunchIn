@@ -13,6 +13,7 @@
 		D033D7121EC40A8000D04B85 /* PunchInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D033D7111EC40A8000D04B85 /* PunchInViewController.swift */; };
 		D033D7161EC430E900D04B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D033D7151EC430E900D04B85 /* Assets.xcassets */; };
 		D033D7181EC4398800D04B85 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D033D7171EC4398800D04B85 /* LocationManager.swift */; };
+		D03C1B631ED52CCF00F7B763 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03C1B621ED52CCF00F7B763 /* SettingViewController.swift */; };
 		D03F14681ECAB07000D63261 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F14671ECAB07000D63261 /* TimePickerViewController.swift */; };
 		D05EDC6A1EC0086300EBCB54 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC611EC0086300EBCB54 /* Reachability.m */; };
 		D05EDC6B1EC0086300EBCB54 /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EDC631EC0086300EBCB54 /* ReachabilityManager.m */; };
@@ -82,6 +83,7 @@
 		D033D7111EC40A8000D04B85 /* PunchInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunchInViewController.swift; sourceTree = "<group>"; };
 		D033D7151EC430E900D04B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D033D7171EC4398800D04B85 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D03C1B621ED52CCF00F7B763 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D03F14671ECAB07000D63261 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		D05EDC601EC0086300EBCB54 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D05EDC611EC0086300EBCB54 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				D033D7111EC40A8000D04B85 /* PunchInViewController.swift */,
 				D033D70F1EC40A5300D04B85 /* StaffSignViewController.swift */,
 				D03F14671ECAB07000D63261 /* TimePickerViewController.swift */,
+				D03C1B621ED52CCF00F7B763 /* SettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				D05EDCA01EC0371900EBCB54 /* MenuViewController.swift in Sources */,
 				D05EDC6A1EC0086300EBCB54 /* Reachability.m in Sources */,
 				D0B1DDB41EBFF9B900217F53 /* AppDelegate.swift in Sources */,
+				D03C1B631ED52CCF00F7B763 /* SettingViewController.swift in Sources */,
 				D05EDC9B1EC0360300EBCB54 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				D0B7DB1D1EC0A04200183FA1 /* FeedManager.swift in Sources */,
 				D05EDC981EC0360300EBCB54 /* SlideNavigationContorllerAnimatorScale.m in Sources */,

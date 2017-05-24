@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 
+let DEFAULT_COORDINATE: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 25.0530796100264, longitude: 121.56007485006)
+
 class LocationManager: NSObject, CLLocationManagerDelegate {
     
     private static var _manager: LocationManager?
@@ -17,11 +19,12 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var manager: CLLocationManager!
     public var currentCoordinate: CLLocationCoordinate2D?
     public dynamic var updateCount = 0
-    private let defaultCoordinate = CLLocationCoordinate2D(latitude: 25.0530796100264, longitude: 121.56007485006)
+    public var defaultCoordinate = DEFAULT_COORDINATE
     
     public static func sharedInstance() -> LocationManager {
         if _manager == nil {
             _manager = LocationManager()
+            _manager?.resetCoordinate()
         }
         return _manager!
     }
@@ -30,6 +33,15 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         manager = CLLocationManager()
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.distanceFilter = 5
+    }
+    
+    public func resetCoordinate() {
+        let userDefault = UserDefaults.standard
+        let lat = userDefault.double(forKey: LAT_KEY)
+        let lon = userDefault.double(forKey: LON_KEY)
+        if lat != 0 && lon != 0 {
+            defaultCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        }
     }
     
     public func startLocation() {

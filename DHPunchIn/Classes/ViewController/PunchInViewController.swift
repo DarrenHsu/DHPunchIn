@@ -61,7 +61,7 @@ class PunchInViewController: BaseViewController {
     }
 
     func loadImage () {
-        guard location.calculateDistance() < 5 else {
+        guard location.calculateDistance() < 10 else {
             ui.showAlert("你目前不在指定區域內!", controller: self)
             return
         }

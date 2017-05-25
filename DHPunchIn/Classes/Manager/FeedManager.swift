@@ -60,8 +60,9 @@ class FeedManager: NSObject {
         }
     }
     
-    public func requestUploadStaff(_ staff: Staff, success: (([Staff]?) -> ())?, failure: ((String) ->())?)  {
-        let dict = staff.toDict();
+    public func requestUploadStaff(_ staff: Staff, success: ((Staff) -> ())?, failure: ((String) ->())?)  {
+        let dict = staff.toUploadDict()
+        
         let jsonData = try! JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
         
         let url = URL(string: "\(Dns)/api/employees/\(staff.staffId!)")
@@ -77,8 +78,8 @@ class FeedManager: NSObject {
                 return
             }
             
-            if let jsonData = result {
-                success?(self.convertToStaffs(jsonData))
+            if self.checkResult(result) {
+                success?(staff)
             }else {
                 failure?("更新失敗")
             }
@@ -228,6 +229,7 @@ class FeedManager: NSObject {
                     break
                 case "application/json":
                     print("CONTENT: \n \(String(data: result as! Data, encoding: .utf8)!)")
+                    break
                 default:
                     print("CONTENT: Other Content")
                     break

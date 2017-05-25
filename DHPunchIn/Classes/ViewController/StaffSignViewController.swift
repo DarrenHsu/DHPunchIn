@@ -111,8 +111,8 @@ class StaffSignViewController: BaseViewController, UITextFieldDelegate {
         }
         
         ui.startLoading(self.view)
-        feed.requestUploadStaff(staff, success: { (staffs) in
-            self.app.saveStaff((staffs?.first)!)
+        feed.requestUploadStaff(staff, success: { (staff) in
+            self.app.saveStaff(staff)
             self.loadDefaultValue(false)
             self.ui.stopLoading()
         }) {(msg) in

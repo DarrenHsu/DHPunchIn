@@ -42,7 +42,15 @@ class Staff: NSObject, NSCoding  {
         aCoder.encode(targetId, forKey: "targetId")
     }
     
-    func toDict() -> [String:Any] {
+    func toUploadDict() -> [String: Any] {
+        var dict = toDict()
+        dict.removeValue(forKey: "staffId")
+        dict.removeValue(forKey: "imageUrl")
+        dict.removeValue(forKey: "targetId")
+        return dict
+    }
+    
+    func toDict() -> [String: Any] {
         var dict = [String:Any]()
         let otherSelf = Mirror(reflecting: self)
         for child in otherSelf.children {

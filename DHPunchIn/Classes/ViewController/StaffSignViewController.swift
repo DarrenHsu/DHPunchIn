@@ -71,9 +71,9 @@ class StaffSignViewController: BaseViewController, UITextFieldDelegate {
             self.app.saveStaff(staff)
             self.loadDefaultValue(false)
             self.ui.stopLoading()
-        }) {
+        }) {(msg) in
             self.ui.stopLoading()
-            self.ui.showAlert("查無此員工資料", controller: self)
+            self.ui.showAlert(msg, controller: self)
         }
     }
     
@@ -97,9 +97,9 @@ class StaffSignViewController: BaseViewController, UITextFieldDelegate {
             self.app.saveStaff(staff)
             self.loadDefaultValue(false)
             self.ui.stopLoading()
-        }) {
+        }) {(msg) in
             self.ui.stopLoading()
-            self.ui.showAlert("新增員工失敗", controller: self)
+            self.ui.showAlert(msg, controller: self)
         }
     }
     
@@ -115,9 +115,9 @@ class StaffSignViewController: BaseViewController, UITextFieldDelegate {
             self.app.saveStaff((staffs?.first)!)
             self.loadDefaultValue(false)
             self.ui.stopLoading()
-        }) {
+        }) {(msg) in
             self.ui.stopLoading()
-            self.ui.showAlert("修改員工失敗", controller: self)
+            self.ui.showAlert(msg, controller: self)
         }
     }
     

@@ -88,10 +88,11 @@ class MainViewController: BaseViewController, GMSMapViewDelegate {
                 self.noLable?.text = self.app.staff?.staffId
                 self.nameLabel?.text = self.app.staff?.name
                 self.ui.stopLoading()
-            }, failure: {
+            }) {(msg) in
                 self.app.removeStaff()
                 self.ui.stopLoading()
-            })
+                self.ui.showAlert(msg, controller: self)
+            }
         }
     }
     

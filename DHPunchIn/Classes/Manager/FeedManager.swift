@@ -17,7 +17,7 @@ extension Data {
     }
 }
 
-let DEFAULT_DNS: String = "http://788697ad.ngrok.io/"
+let DEFAULT_DNS: String = "http://9848308f.ngrok.io/"
 
 class FeedManager: NSObject {
 
@@ -41,21 +41,26 @@ class FeedManager: NSObject {
         }
     }
     
-    public func requestImage(_ urlStr: String, success: ((UIImage) -> ())?, failure: (() ->())?)  {
+    public func requestImage(_ urlStr: String, success: ((UIImage) -> ())?, failure: ((String) ->())?)  {
         let url = URL(string: urlStr)
         
         let request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         
         doRequest(request) { (response, result, error) in
-            if result != nil {
-                success?(UIImage(data: result as! Data)!)
+            if let e = error {
+                failure?(e.localizedDescription)
+                return
+            }
+            
+            if let imgData = result {
+                success?(UIImage(data: imgData as! Data)!)
             }else {
-                failure?()
+                failure?("取得圖片失敗")
             }
         }
     }
     
-    public func requestUploadStaff(_ staff: Staff, success: (([Staff]?) -> ())?, failure: (() ->())?)  {
+    public func requestUploadStaff(_ staff: Staff, success: (([Staff]?) -> ())?, failure: ((String) ->())?)  {
         let dict = staff.toDict();
         let jsonData = try! JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
         
@@ -67,51 +72,62 @@ class FeedManager: NSObject {
         request.httpBody = jsonData
         
         doRequest(request) { (response, result, error) in
-            if error == nil {
-                success?(self.convertToStaffs(result))
+            if let e = error {
+                failure?(e.localizedDescription)
+                return
+            }
+            
+            if let jsonData = result {
+                success?(self.convertToStaffs(jsonData))
             }else {
-                failure?()
+                failure?("更新失敗")
             }
         }
     }
 
     
-    public func requestRemoveStaff(_ staff: Staff, success: ((Staff) -> ())?, failure: (() ->())?)  {
+    public func requestRemoveStaff(_ staff: Staff, success: ((Staff) -> ())?, failure: ((String) ->())?)  {
         let url = URL(string: "\(Dns)/api/employees/\(staff.staffId!)")
         
         var request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         request.httpMethod = "DELETE"
         
         doRequest(request) { (response, result, error) in
+            if let e = error {
+                failure?(e.localizedDescription)
+                return
+            }
+            
             if self.checkResult(result) {
                 success?(staff)
             }else {
-                failure?()
+                failure?("刪除失敗")
             }
         }
     }
 
     
-    public func requestStaff(_ staffId: String, success: ((Staff) -> ())?, failure: (() ->())?)  {
+    public func requestStaff(_ staffId: String, success: ((Staff) -> ())?, failure: ((String) ->())?)  {
         let url = URL(string: "\(Dns)/api/employees/\(staffId)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
 
         let request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         
         doRequest(request) { (response, result, error) in
-            if error == nil {
-                let s = self.convertToStaffs(result)
-                if s.count > 0 {
-                    success?(s.first!)
-                }else {
-                    failure?()
-                }
+            if let e = error {
+                failure?(e.localizedDescription)
+                return
+            }
+            
+            let s = self.convertToStaffs(result)
+            if s.count > 0 {
+                success?(s.first!)
             }else {
-                failure?()
+                failure?("取得失敗")
             }
         }
     }
     
-    public func requestAddStaff(_ staff: Staff, success: ((Staff) -> ())?, failure: (() ->())?)  {
+    public func requestAddStaff(_ staff: Staff, success: ((Staff) -> ())?, failure: ((String) ->())?)  {
         let dict = staff.toDict();
         let jsonData = try! JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
         
@@ -123,25 +139,31 @@ class FeedManager: NSObject {
         request.httpBody = jsonData
         
         doRequest(request) { (response, result, error) in
+            if let e = error {
+                failure?(e.localizedDescription)
+                return
+            }
+            
             if self.checkResult(result) {
                 success?(staff)
             }else {
-                failure?()
+                failure?("新增失敗")
             }
         }
     }
     
-    public func requestAllStaff(_ success: (([Staff]?) -> ())?, failure: (() ->())?)  {
+    public func requestAllStaff(_ success: (([Staff]?) -> ())?, failure: ((String) ->())?)  {
         let url = URL(string: "\(Dns)/api/employees")
         
         let request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         
         doRequest(request) { (response, result, error) in
-            if error == nil {
-                success?(self.convertToStaffs(result))
-            }else {
-                failure?()
+            if let e = error {
+                failure?(e.localizedDescription)
+                return
             }
+            
+            success?(self.convertToStaffs(result))
         }
     }
     
@@ -192,8 +214,8 @@ class FeedManager: NSObject {
         
         let dataTask = manager.dataTask(with: request) { (response, result, error) in
             print("<------------------------------ response ------------------------------>")
-            print("URL: \(response.url!)")
             if error == nil {
+                print("URL: \(response.url!)")
                 let res = response as! HTTPURLResponse
                 print("STATUS CODE: \(res.statusCode)")
                 print("MIME: \(res.mimeType!)")

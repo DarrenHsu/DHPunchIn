@@ -74,9 +74,9 @@ class PunchInViewController: BaseViewController {
         feed.requestImage((app.staff?.imageUrl)!, success: { (image) in
             self.imageView?.image = image
             self.ui.stopLoading()
-        }) {
+        }) {(msg) in
             self.ui.stopLoading()
-            
+            self.ui.showAlert(msg, controller: self)
         }
     }
 }
